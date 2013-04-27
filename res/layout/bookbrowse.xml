@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:id="@+id/introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:orientation="horizontal">
+		<RelativeLayout
+		    style="@style/GenericProgressBackground"
+		    android:id="@+id/loadingPanel"
+		    android:visibility="visible"
+		    >
+		    <ProgressBar
+		        style="@style/GenericProgressIndicator"/>
+		</RelativeLayout>
+        <ImageView
+            android:id="@+id/coverimg"
+            android:layout_width="120dp"
+            android:layout_height="180dp"
+            android:contentDescription="@string/coverimg"
+            android:scaleType="centerInside"
+            android:src="@drawable/cover" 
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/textintro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:orientation="vertical" >
+
+	        <TextView 
+	            style="@style/CodeFont"
+	            android:id="@+id/title"
+	            android:text="@string/title"
+	            android:textSize="20sp"
+	            android:maxLines="2"
+	            android:paddingBottom="0dp"/>
+	        <TextView 
+	            style="@style/CodeFont"
+	            android:id="@+id/subtitle"
+	            android:text="@string/subtitle"
+	            android:visibility="gone"/>
+	        <TextView 
+	            style="@style/CodeFont"
+	            android:id="@+id/author"
+	            android:text="@string/author"/>
+	        <TextView 
+	            style="@style/CodeFont"
+	            android:id="@+id/translator"
+	            android:text="@string/translator"
+	            android:visibility="gone"/>
+	        <TextView 
+	            style="@style/CodeFont"
+	            android:id="@+id/publisher"
+	            android:text="@string/publisher"/>
+	        <TextView 
+	            style="@style/CodeFont"
+	            android:id="@+id/pubdate"
+	            android:text="@string/pubdate"/>
+	        <TextView 
+	            style="@style/CodeFont"
+	            android:id="@+id/isbn"
+	            android:text="@string/isbn"/>
+
+	        <LinearLayout
+	            android:id="@+id/status"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	            <RatingBar 
+	                android:id="@+id/statusStar"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:numStars="5"
+	                android:isIndicator="true"
+	                android:max="10"
+	                android:stepSize="0.1"
+	                android:rating="4.5"
+	                style="?android:attr/ratingBarStyleSmall"/>
+	            <TextView 
+	                android:id="@+id/statusText"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="right"
+	                android:text="@string/evaluate"/>
+	        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ratetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:paddingLeft="3dp"            
+            android:text="@string/rate"
+            android:textSize="18sp" />
+
+        <RatingBar
+            android:id="@+id/ratebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:max="10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" 
+        android:maxLines="30"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">豆读</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="coverimg">封面图片</string>
+    <string name = "rate">评分和评价</string>
+    <string name="title">书名</string>
+    <string name="subtitle">副标题</string>
+    <string name="author">作者: </string>
+    <string name="translator">译者: </string>
+    <string name="isbn">ISBN: </string>
+    <string name="price">价格: </string>
+    <string name="pages">页数: </string>
+    <string name="publisher">出版社: </string>
+    <string name="pubdate">出版日期: </string>
+    <string name="evaluate">（X人评价）</string>
+
+</resources>
